@@ -24,13 +24,9 @@ class _PosPageState extends State<PosPage> {
           children: [
             // Cua hang
             Container(
-              padding: new EdgeInsets.all(10.0),
-              child: RichText(
-                text: TextSpan(
-                    text: 'Cửa Hàng',
-                    style:
-                        TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-              ),
+              padding: new EdgeInsets.fromLTRB(20, 10, 0, 10),
+              child: Text('Cửa Hàng',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
             ),
             Divider(
               indent: 20,
@@ -42,12 +38,9 @@ class _PosPageState extends State<PosPage> {
                 child: Row(children: [
                   Container(
                     padding: new EdgeInsets.all(20.0),
-                    child: RichText(
-                      text: TextSpan(
-                          text: 'Tên CH:',
-                          style: TextStyle(
-                              fontSize: 15, fontWeight: FontWeight.bold)),
-                    ),
+                    child: Text('Tên CH:',
+                        style: TextStyle(
+                            fontSize: 15, fontWeight: FontWeight.bold)),
                   ),
                   Container(
                     child: Text('TEST-2 Ba Tháng Hai'),
@@ -58,12 +51,9 @@ class _PosPageState extends State<PosPage> {
                   child: Row(children: [
                 Container(
                   padding: new EdgeInsets.all(20.0),
-                  child: RichText(
-                    text: TextSpan(
-                        text: 'Địa Chỉ:',
-                        style: TextStyle(
-                            fontSize: 15, fontWeight: FontWeight.bold)),
-                  ),
+                  child: Text('Địa Chỉ:',
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
                 ),
                 Container(child: Text('2 Đường 3/2, Quận 10'))
               ]))
@@ -72,12 +62,8 @@ class _PosPageState extends State<PosPage> {
             // Kieu Menu
             Container(
               padding: new EdgeInsets.fromLTRB(20, 20, 0, 0),
-              child: RichText(
-                text: TextSpan(
-                    text: 'Kiểu Menu',
-                    style:
-                        TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-              ),
+              child: Text('Kiểu Menu',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
             ),
             Divider(
               indent: 20,
@@ -86,7 +72,7 @@ class _PosPageState extends State<PosPage> {
             // radio button
 
             Row(children: [
-              Padding(padding: EdgeInsets.all(20.0)),
+              Padding(padding: EdgeInsets.fromLTRB(20, 10, 0, 10)),
               Container(
                   height: 50,
                   width: 180,
@@ -94,16 +80,15 @@ class _PosPageState extends State<PosPage> {
                       border: Border.all(color: Colors.black12),
                       borderRadius: BorderRadius.circular(5)),
                   child: RadioListTile(
-                    value: 1,
-                    groupValue: _value,
-                    onChanged: (value) {
-                      setState(() {
-                        _value = value!;
-                      });
-                    },
-                    title: Text('Menu dọc'),
-                  )),
-              Padding(padding: EdgeInsets.all(20.0)),
+                      value: 1,
+                      groupValue: _value,
+                      onChanged: (value) {
+                        setState(() {
+                          _value = value!;
+                        });
+                      },
+                      title: Text('Menu dọc'))),
+              Padding(padding: EdgeInsets.fromLTRB(20, 10, 0, 10)),
               Container(
                   height: 50,
                   width: 180,
@@ -111,15 +96,14 @@ class _PosPageState extends State<PosPage> {
                       border: Border.all(color: Colors.black12),
                       borderRadius: BorderRadius.circular(5)),
                   child: RadioListTile(
-                    value: 2,
-                    groupValue: _value,
-                    onChanged: (value) {
-                      setState(() {
-                        _value = value!;
-                      });
-                    },
-                    title: Text('Menu ngang'),
-                  ))
+                      value: 2,
+                      groupValue: _value,
+                      onChanged: (value) {
+                        setState(() {
+                          _value = value!;
+                        });
+                      },
+                      title: Text('Menu ngang')))
             ]),
             //Check box
 
@@ -128,7 +112,7 @@ class _PosPageState extends State<PosPage> {
                 Container(
                     padding: new EdgeInsets.fromLTRB(20, 0, 0, 0),
                     height: 50,
-                    width: 400,
+                    width: 350,
                     child: ListTile(
                         onTap: () {
                           setState(() {
@@ -142,31 +126,24 @@ class _PosPageState extends State<PosPage> {
                                 _checkColor.value = !_checkColor.value;
                               });
                             }),
-                        title: Text(_checkColor.title)))
+                        title: Text(_checkColor.title,
+                            style: TextStyle(fontSize: 14))))
               ],
             ),
             Container(
-              padding: new EdgeInsets.fromLTRB(20, 0, 0, 0),
-              child: RichText(
-                text: TextSpan(
-                    text: 'Dữ liệu POS',
+                padding: new EdgeInsets.fromLTRB(20, 0, 0, 0),
+                child: Text('Dữ liệu POS',
                     style:
-                        TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-              ),
-            ),
+                        TextStyle(fontSize: 20, fontWeight: FontWeight.bold))),
             Divider(
               indent: 20,
               endIndent: 20,
             ),
             Container(
-              padding: new EdgeInsets.fromLTRB(20, 20, 0, 0),
-              child: RichText(
-                text: TextSpan(
-                    text: 'Tài Khoản',
+                padding: new EdgeInsets.fromLTRB(20, 20, 0, 0),
+                child: Text('Tài Khoản',
                     style:
-                        TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-              ),
-            ),
+                        TextStyle(fontSize: 20, fontWeight: FontWeight.bold))),
             Divider(
               indent: 20,
               endIndent: 20,
@@ -175,84 +152,73 @@ class _PosPageState extends State<PosPage> {
               Container(
                 child: Row(children: [
                   Container(
-                    padding: new EdgeInsets.all(20.0),
-                    child: RichText(
-                      text: TextSpan(
-                          text: 'Tên:',
+                      padding: new EdgeInsets.all(20.0),
+                      child: Text('Tên:',
                           style: TextStyle(
-                              fontSize: 15, fontWeight: FontWeight.bold)),
-                    ),
-                  ),
+                              fontSize: 15, fontWeight: FontWeight.bold))),
                   Container(
                     child: Text('POS Test'),
-                  ),
+                  )
                 ]),
               ),
               Container(
                   child: Row(children: [
                 Container(
-                  padding: new EdgeInsets.all(20.0),
-                  child: RichText(
-                    text: TextSpan(
-                        text: 'Email:',
-                        style: TextStyle(
-                            fontSize: 15, fontWeight: FontWeight.bold)),
-                  ),
-                ),
+                    padding: new EdgeInsets.all(20.0),
+                    child: Text(
+                      'Email:',
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                    )),
                 Container(child: Text('postest@gutacafe.com'))
               ]))
             ]),
             Container(
-              padding: new EdgeInsets.fromLTRB(20, 0, 0, 0),
-              width: 200,
-              height: 40,
-              child: ElevatedButton(
-                onPressed: () {},
-                child: Center(
-                  child: Text('Đăng xuất khỏi POS'),
-                ),
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.red)),
-              ),
-            ),
+                padding: new EdgeInsets.fromLTRB(20, 0, 0, 0),
+                width: 200,
+                height: 40,
+                child: ElevatedButton(
+                    onPressed: () {},
+                    child: Center(
+                      child: Text('Đăng xuất khỏi POS'),
+                    ),
+                    style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all(Colors.red)))),
             Expanded(
-              child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    Row(children: [
-                      Expanded(
-                          child: Container(
-                              padding: new EdgeInsets.all(10.0),
-                              width: 180,
-                              height: 50,
-                              child: ElevatedButton.icon(
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                  Row(children: [
+                    Expanded(
+                        child: Container(
+                            padding: new EdgeInsets.all(10.0),
+                            width: 180,
+                            height: 50,
+                            child: ElevatedButton.icon(
+                              onPressed: () {},
+                              icon: Icon(Icons.save_rounded),
+                              label: Text('Lưu cài đặt'),
+                              style: ButtonStyle(
+                                  backgroundColor: MaterialStateProperty.all(
+                                      Colors.blue[900])),
+                            ))),
+                    Expanded(
+                        child: Container(
+                            padding: new EdgeInsets.all(10.0),
+                            width: 180,
+                            height: 50,
+                            child: ElevatedButton(
                                 onPressed: () {},
-                                icon: Icon(Icons.save_rounded),
-                                label: Text('Lưu cài đặt'),
+                                child: Center(
+                                  child: Text('Đóng'),
+                                ),
                                 style: ButtonStyle(
                                     backgroundColor: MaterialStateProperty.all(
-                                        Colors.blue[900])),
-                              ))),
-                      Expanded(
-                        child: Container(
-                          padding: new EdgeInsets.all(10.0),
-                          width: 180,
-                          height: 50,
-                          child: ElevatedButton(
-                            onPressed: () {},
-                            child: Center(
-                              child: Text('Đóng'),
-                            ),
-                            style: ButtonStyle(
-                                backgroundColor:
-                                    MaterialStateProperty.all(Colors.black38)),
-                          ),
-                        ),
-                      ),
-                    ])
-                  ]),
-            )
+                                        Colors.black38)))))
+                  ])
+                ]))
           ],
         ),
       );
